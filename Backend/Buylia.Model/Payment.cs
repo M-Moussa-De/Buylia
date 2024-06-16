@@ -1,11 +1,14 @@
-﻿namespace Buylia.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Buylia.Model;
 
 public class Payment
 {
     public int Id { get; set; }
-    public int CustomerId { get; set; }
-    public int OrderId { get; set; }
-    public virtual ICollection<Order>? Orders { get; set; }
     public decimal Amount { get; set; }
-    public string? PaymentMethod { get; set; }
+    [Required]
+    public string Response { get; set; } = string.Empty;
+
+    public int OrderId { get; set; }
+    public virtual Order? Order { get; set; }
 }

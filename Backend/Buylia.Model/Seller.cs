@@ -1,8 +1,12 @@
-﻿namespace Buylia.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Buylia.Model;
 
 public class Seller : User
 {
-    public string? ShopName { get; set; }
+    [Required]
+    [MaxLength(100)]
+    public string ShopName { get; set; } = string.Empty;
     public string? ShopDescription { get; set; }
     public string? ShopImage { get; set; }
 

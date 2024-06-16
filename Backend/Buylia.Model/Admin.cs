@@ -1,6 +1,10 @@
-﻿namespace Buylia.Models;
+﻿using Buylia.Model.Enums;
+using System.ComponentModel.DataAnnotations;
+
+namespace Buylia.Model;
 
 public class Admin : User
 {
-    public string? Role { get; set; }
+    [Required]
+    public UserRole Role { get; set; }
 }
