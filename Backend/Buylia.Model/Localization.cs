@@ -1,11 +1,19 @@
-﻿namespace Buylia.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class Localization<T> where T : class
+namespace Buylia.Model;
+
+public class Localization
 {
     public int Id { get; set; }
-    public string? NameArabic { get; set; }
-    public string? DescriptionArabic { get; set; }
+    public string? Name { get; set; }
+    public string? Description { get; set; }
+    [Required]
+    [MaxLength(10)]
+    public string Language { get; set; } = string.Empty;
 
-    public int ObjectId { get; set; }
-    public T? ObjectName { get; set; }
+    public int? ProductId { get; set; }
+    public virtual Product? Product { get; set; }
+
+    public int? CategoryId { get; set; }
+    public virtual Category? Category { get; set; }
 }

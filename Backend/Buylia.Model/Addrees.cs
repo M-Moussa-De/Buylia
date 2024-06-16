@@ -1,4 +1,4 @@
-﻿namespace Buylia.Models;
+﻿namespace Buylia.Model;
 
 public class Addrees
 {
