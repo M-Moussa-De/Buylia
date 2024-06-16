@@ -1,4 +1,4 @@
-@Buylia.API_HostAddress = http://localhost:5218
+@Buylia.API_HostAddress = http://localhost:5099
 
 GET {{Buylia.API_HostAddress}}/weatherforecast/
 Accept: application/json
