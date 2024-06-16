@@ -1,0 +1,10 @@
+﻿namespace Buylia.Models;
+
+public class Customer : User
+{
+    public DateTime DateOfBirth { get; set; }
+    public virtual ICollection<Addrees>? Address { get; set; }
+    public virtual ICollection<Cart>? Carts { get; set; }
+    public virtual ICollection<Order>? Orders { get; set; }
+    public virtual ICollection<Review>? Reviews { get; set; }
+}

@@ -1,0 +1,6 @@
+﻿namespace Buylia.Models;
+
+public class Admin : User
+{
+    public string? Role { get; set; }
+}
