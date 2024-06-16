@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Buylia.Application\Buylia.Application.csproj" />
+    <ProjectReference Include="..\Buylia.Context\Buylia.Context.csproj" />
+    <ProjectReference Include="..\Buylia.DTO\Buylia.DTO.csproj" />
+    <ProjectReference Include="..\Buylia.Infrastructure\Buylia.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

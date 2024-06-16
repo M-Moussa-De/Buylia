@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Buylia.DTO\Buylia.DTO.csproj" />
+  </ItemGroup>
+
 </Project>
