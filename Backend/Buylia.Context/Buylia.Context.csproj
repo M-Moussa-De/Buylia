@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Buylia.DTO\Buylia.DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataJson\" />
   </ItemGroup>
 
 </Project>
