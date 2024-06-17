@@ -11,9 +11,11 @@ builder.Services.AddSwaggerGen();
 
 #region DB Connection
 builder.Services.AddDbContext<BuyliaDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+sqlServerOptionsAction: SqlOptions =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+    SqlOptions.CommandTimeout(60);
+}), ServiceLifetime.Scoped);
 #endregion
 
 
@@ -23,14 +25,17 @@ var app = builder.Build();
 #region Seeders
 using (var scope = app.Services.CreateScope())
 {
-    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetRequiredService<BuyliaDbContext>();
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
     try
     {
-        var context = scope.ServiceProvider.GetRequiredService<BuyliaDbContext>();
-        DbInitializer.Initialize(context);
+        await dbContext.Database.MigrateAsync();
+        await DbInitializer.Initialize(dbContext);
     }
     catch (Exception ex)
     {
+        var logger = loggerFactory.CreateLogger<Program>();
         logger.LogError(ex, "An error occurred while seeding the database.");
     }
 }
