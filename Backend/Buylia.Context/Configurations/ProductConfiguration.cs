@@ -9,7 +9,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
     public void Configure(EntityTypeBuilder<Product> builder)
     {
         // PK
-        builder.HasKey(p => p.Id);
+        builder.HasKey(p => p.ProductId);
 
         // Name
         builder.Property(p => p.Name)
@@ -22,15 +22,13 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
         // Price
         builder.Property(p => p.Price)
-               .HasPrecision(10, 2);
+               .IsRequired()
+               .HasDefaultValue(0.0);
 
         // Stock
         builder.Property(p => p.Stock)
-               .HasMaxLength(int.MinValue);
-
-        // Image
-        builder.Property(p => p.Image)
-            .HasMaxLength(500);
+               .IsRequired()
+               .HasDefaultValue(0);
 
         // Brand
         builder.Property(p => p.Brand)
@@ -38,7 +36,9 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
         // Rating
         builder.Property(p => p.Rating)
-            .HasPrecision(3, 1);
+            .IsRequired()
+            .HasDefaultValue(0.0)
+            .HasConversion<float>();
 
         // Navigation Category
         builder.HasOne(p => p.Category)
@@ -61,7 +61,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         // Collection Tags
         builder.HasMany(p => p.Tags)
                .WithMany(t => t.Products)
-               .OnDelete(DeleteBehavior.Cascade);
+               .UsingEntity(j => j.ToTable("ProductTags"));
 
         // Collection Colors
         builder.HasMany(p => p.Colors)
@@ -86,8 +86,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         // Collection Localization
         builder.HasMany(p => p.Localization)
                .WithOne(l => l.Product)
+               .HasForeignKey(l => l.ProductId)
                .OnDelete(DeleteBehavior.Cascade);
-
-
     }
 }

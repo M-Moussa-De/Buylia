@@ -19,7 +19,7 @@ public class ReviewConfiguration : IEntityTypeConfiguration<Review>
 
         // Rating
         builder.Property(r => r.Rating)
-              .HasPrecision(3, 1);
+              .HasConversion<float>();
 
         // CreatedAt
         //builder.Property(r => r.CreatedAt)

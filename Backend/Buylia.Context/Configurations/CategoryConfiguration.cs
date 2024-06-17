@@ -9,7 +9,7 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     public void Configure(EntityTypeBuilder<Category> builder)
     {
         // PK
-        builder.HasKey(c => c.Id);
+        builder.HasKey(c => c.CategoryId);
 
         // Name
         builder.Property(c => c.Name)
@@ -24,7 +24,6 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.Property(c => c.Image)
                .HasMaxLength(500);
 
-
         // Configure the self-referencing relationship
         builder.HasOne(ca => ca.ParentCategory)
                .WithMany(sub => sub.SubCategories)
@@ -35,5 +34,11 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
         builder.HasMany(c => c.Products)
                .WithOne(p => p.Category)
                .HasForeignKey(p => p.CategoryId);
+
+        // Collection Localization
+        builder.HasMany(p => p.Localization)
+               .WithOne(l => l.Category)
+               .HasForeignKey(p => p.CategoryId)
+               .OnDelete(DeleteBehavior.Cascade);
     }
 }
