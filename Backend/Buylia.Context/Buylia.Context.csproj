@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataJson\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
