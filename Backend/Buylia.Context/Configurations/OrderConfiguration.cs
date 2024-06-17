@@ -9,7 +9,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
     public void Configure(EntityTypeBuilder<Order> builder)
     {
        // PK
-       builder.HasKey(o => o.Id);
+       builder.HasKey(o => o.OrderId);
 
         // TotalPrice
         builder.Property(o => o.TotalPrice)
@@ -17,8 +17,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         // Status
         builder.Property(o => o.Status)
-            .IsRequired()
-            .HasMaxLength(50);
+            .IsRequired();
 
         // OrderedAt
         builder.Property(o => o.OrderedAt)

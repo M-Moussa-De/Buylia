@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Electronics",
+    "Description": "Devices and gadgets",
+    "Image": "http://example.com/images/electronics.jpg"
+  },
+  {
+    "Name": "Books",
+    "Description": "Various kinds of books",
+    "Image": "http://example.com/images/books.jpg"
+  },
+  {
+    "Name": "Clothing",
+    "Description": "Apparel for men and women",
+    "Image": null
+  },
+  {
+    "Name": "Groceries",
+    "Description": null,
+    "Image": "http://example.com/images/groceries.jpg"
+  }
+]

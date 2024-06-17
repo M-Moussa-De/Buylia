@@ -9,20 +9,24 @@ public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
     public void Configure(EntityTypeBuilder<OrderItem> builder)
     {
         // PK
-        builder.HasKey(oi => oi.Id);
+        builder.HasKey(oi => oi.OrderItemId);
 
         // Quantity
         builder.Property(oi => oi.Quantity)
-            .IsRequired();
-
-        // Navigation Product
-        // builder.HasOne(oi => oi.Product)
+               .IsRequired();
 
         // FK Order
         builder.HasOne(oi => oi.Order)
-            .WithMany(o => o.OrderItems)
-            .HasForeignKey(oi => oi.OrderId)
-            .OnDelete(DeleteBehavior.Restrict);
+               .WithMany(o => o.OrderItems)
+               .HasForeignKey(oi => oi.OrderId)
+               .OnDelete(DeleteBehavior.Cascade);
 
+        // Navigation Product
+        builder.HasOne(oi => oi.Product)
+               .WithMany()
+               .HasForeignKey(oi => oi.ProductId)
+               .OnDelete(DeleteBehavior.Restrict);
+
+  
     }
 }

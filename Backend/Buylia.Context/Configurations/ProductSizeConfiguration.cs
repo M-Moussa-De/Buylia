@@ -14,7 +14,7 @@ public class ProductSizeConfiguration : IEntityTypeConfiguration<ProductSize>
         // Size
         builder.Property(ps => ps.Size)
             .IsRequired()
-            .HasPrecision(3, 1);
+            .HasConversion<float>();
 
         // Navigation Product
         builder.HasOne(ps => ps.Product)

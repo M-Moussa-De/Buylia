@@ -19,6 +19,7 @@ public class TagConfiguration : IEntityTypeConfiguration<Tag>
         // Collection Products
         builder.HasMany(t => t.Products)
                .WithMany(p => p!.Tags)
-               .OnDelete(DeleteBehavior.Cascade);
+               .UsingEntity(j => j.ToTable("ProductTags"));
+
     }
 }

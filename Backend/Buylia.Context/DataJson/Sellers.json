@@ -1,0 +1,37 @@
+[
+  {
+    "ShopName": "Alice's Antiques",
+    "ShopDescription": "Antiques and vintage items",
+    "ShopImage": "http://example.com/images/alice_shop.jpg",
+    "Products": [],
+    "Orders": []
+  },
+  {
+    "ShopName": "Bob's Tools",
+    "ShopDescription": "Tools and hardware",
+    "ShopImage": "http://example.com/images/bob_shop.jpg",
+    "Products": [],
+    "Orders": []
+  },
+  {
+    "ShopName": "Charlie's Chocolates",
+    "ShopDescription": "Delicious chocolates and sweets",
+    "ShopImage": "http://example.com/images/charlie_shop.jpg",
+    "Products": [],
+    "Orders": []
+  },
+  {
+    "ShopName": "Daisy's Florist",
+    "ShopDescription": "Beautiful flower arrangements",
+    "ShopImage": "http://example.com/images/daisy_shop.jpg",
+    "Products": [],
+    "Orders": []
+  },
+  {
+    "ShopName": "Edward's Bookstore",
+    "ShopDescription": "A wide range of books",
+    "ShopImage": "http://example.com/images/edward_shop.jpg",
+    "Products": [],
+    "Orders": []
+  }
+]

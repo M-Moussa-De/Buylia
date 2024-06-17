@@ -5,7 +5,8 @@
     "Price": 99.99,
     "Stock": 250,
     "Rating": 4.7,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId": 1
   },
   {
     "Name": "Electric Toothbrush",
@@ -13,7 +14,8 @@
     "Price": 49.99,
     "Stock": 150,
     "Rating": 4.3,
-    "CategoryId": 3
+    "CategoryId": 3,
+    "SellerId": 2
   },
   {
     "Name": "Smartwatch",
@@ -21,7 +23,8 @@
     "Price": 199.99,
     "Stock": 80,
     "Rating": 4.6,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId":  3
   },
   {
     "Name": "Portable Speaker",
@@ -29,7 +32,8 @@
     "Price": 29.99,
     "Stock": 300,
     "Rating": 4.4,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId":  3
   },
   {
     "Name": "Gaming Mouse",
@@ -37,7 +41,8 @@
     "Price": 39.99,
     "Stock": 200,
     "Rating": 4.5,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId":  2
   },
   {
     "Name": "Laptop Stand",
@@ -45,7 +50,8 @@
     "Price": 24.99,
     "Stock": 120,
     "Rating": 4.2,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId":  1
   },
   {
     "Name": "External Hard Drive",
@@ -53,7 +59,8 @@
     "Price": 79.99,
     "Stock": 90,
     "Rating": 4.8,
-    "CategoryId": 1
+    "CategoryId": 1,
+    "SellerId":  4
   },
   {
     "Name": "Smart LED Bulb",
@@ -61,7 +68,8 @@
     "Price": 14.99,
     "Stock": 500,
     "Rating": 4.1,
-    "CategoryId": 3
+    "CategoryId": 3,
+    "SellerId":  5
   },
   {
     "Name": "Instant Pot",
@@ -69,7 +77,8 @@
     "Price": 89.99,
     "Stock": 60,
     "Rating": 4.7,
-    "CategoryId": 3
+    "CategoryId": 3,
+    "SellerId":  5
   },
   {
     "Name": "Robot Vacuum",
@@ -77,7 +86,8 @@
     "Price": 249.99,
     "Stock": 40,
     "Rating": 4.5,
-    "CategoryId": 3
+    "CategoryId": 3,
+    "SellerId": 4
   },
   {
     "Name": "Men's T-Shirt",
@@ -85,7 +95,8 @@
     "Price": 19.99,
     "Stock": 300,
     "Rating": 4.3,
-    "CategoryId": 2
+    "CategoryId": 2,
+    "SellerId":  3
   },
   {
     "Name": "Women's Jeans",
@@ -93,7 +104,8 @@
     "Price": 49.99,
     "Stock": 200,
     "Rating": 4.5,
-    "CategoryId": 2
+    "CategoryId": 2,
+    "SellerId":  2
   },
   {
     "Name": "Children's Story Book",
@@ -101,7 +113,8 @@
     "Price": 12.99,
     "Stock": 500,
     "Rating": 4.7,
-    "CategoryId": 4
+    "CategoryId": 4,
+    "SellerId":  1
   },
   {
     "Name": "Cookbook",
@@ -109,7 +122,8 @@
     "Price": 24.99,
     "Stock": 150,
     "Rating": 4.6,
-    "CategoryId": 4
+    "CategoryId": 4,
+    "SellerId":  5
   },
   {
     "Name": "Gardening Gloves",
@@ -117,6 +131,7 @@
     "Price": 14.99,
     "Stock": 350,
     "Rating": 4.4,
-    "CategoryId": 3
+    "CategoryId": 3,
+    "SellerId": 3
   }
 ]

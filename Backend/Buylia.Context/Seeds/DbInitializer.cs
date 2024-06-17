@@ -5,9 +5,10 @@ namespace Buylia.Context.Seeds;
 
 public static class DbInitializer
 {
-    private static readonly string filePathBase = "./DataJson/";
+    private static readonly string filePathBase 
+        = "../Buylia.Context/DataJson/";
 
-    public static void Initialize(BuyliaDbContext context)
+    public static async Task Initialize(BuyliaDbContext context)
     {
         context.Database.EnsureCreated();
 
@@ -17,22 +18,32 @@ public static class DbInitializer
 
             if (categories != null)
             {
-                context.Categories.AddRange(categories);
-                context.SaveChanges();
+               context.Categories.AddRange(categories);
+               await context.SaveChangesAsync();
+            }
+        }
+
+        if (!context.Sellers.Any())
+        {
+            var sellers = GetDataFromJson<List<Seller>>("Sellers.json");
+
+            if (sellers != null)
+            {
+               context.Sellers.AddRange(sellers);
+               await context.SaveChangesAsync();
             }
         }
 
         if (!context.Products.Any())
         {
-            var products = GetDataFromJson<List<Product>>("Products.sjon");
+            var products = GetDataFromJson<List<Product>>("Products.json");
 
             if (products != null)
             {
                 context.Products.AddRange(products);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
-
     }
 
     private static T? GetDataFromJson<T>(string fileName)
