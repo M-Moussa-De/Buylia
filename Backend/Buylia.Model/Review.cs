@@ -1,14 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Buylia.Model;
+﻿namespace Buylia.Model;
 
 public class Review
 {
     public int Id { get; set; }
-    [Required] // Dependes on the Bus req. Could be optional
-    [MaxLength(1000)]
     public string Content { get; set; } = string.Empty;
-    [Range(0, 5)]
     public float Rating { get; set; }
     public DateTime CreatedAt { get; set; }
 
