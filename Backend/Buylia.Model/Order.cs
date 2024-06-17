@@ -1,5 +1,4 @@
 ﻿using Buylia.Model.Enums;
-using System.ComponentModel.DataAnnotations;
 
 namespace Buylia.Model;
 
@@ -7,7 +6,6 @@ public class Order
 {
     public int Id { get; set; }
     public double TotalPrice { get; set; }
-    [MaxLength(50)]
     public OrderStatus Status { get; set; }
     public DateTime OrderedAt { get; set; }
     public DateTime ArrivedOn { get; set; }

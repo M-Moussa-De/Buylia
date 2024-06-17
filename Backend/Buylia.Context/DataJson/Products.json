@@ -1,0 +1,122 @@
+[
+  {
+    "Name": "Wireless Headphones",
+    "Description": "Noise-cancelling over-ear headphones with Bluetooth connectivity.",
+    "Price": 99.99,
+    "Stock": 250,
+    "Rating": 4.7,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Electric Toothbrush",
+    "Description": "Rechargeable electric toothbrush with multiple brushing modes.",
+    "Price": 49.99,
+    "Stock": 150,
+    "Rating": 4.3,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Smartwatch",
+    "Description": "Fitness tracking smartwatch with heart rate monitor and GPS.",
+    "Price": 199.99,
+    "Stock": 80,
+    "Rating": 4.6,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Portable Speaker",
+    "Description": "Waterproof portable Bluetooth speaker with 10-hour battery life.",
+    "Price": 29.99,
+    "Stock": 300,
+    "Rating": 4.4,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Gaming Mouse",
+    "Description": "Ergonomic gaming mouse with customizable buttons and RGB lighting.",
+    "Price": 39.99,
+    "Stock": 200,
+    "Rating": 4.5,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Laptop Stand",
+    "Description": "Adjustable aluminum laptop stand with ventilation design.",
+    "Price": 24.99,
+    "Stock": 120,
+    "Rating": 4.2,
+    "CategoryId": 1
+  },
+  {
+    "Name": "External Hard Drive",
+    "Description": "2TB external hard drive with USB 3.0 connectivity.",
+    "Price": 79.99,
+    "Stock": 90,
+    "Rating": 4.8,
+    "CategoryId": 1
+  },
+  {
+    "Name": "Smart LED Bulb",
+    "Description": "Wi-Fi enabled smart LED bulb with color-changing capabilities.",
+    "Price": 14.99,
+    "Stock": 500,
+    "Rating": 4.1,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Instant Pot",
+    "Description": "7-in-1 multi-use programmable pressure cooker.",
+    "Price": 89.99,
+    "Stock": 60,
+    "Rating": 4.7,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Robot Vacuum",
+    "Description": "Self-charging robotic vacuum cleaner with multiple cleaning modes.",
+    "Price": 249.99,
+    "Stock": 40,
+    "Rating": 4.5,
+    "CategoryId": 3
+  },
+  {
+    "Name": "Men's T-Shirt",
+    "Description": "Cotton crew neck t-shirt available in multiple colors.",
+    "Price": 19.99,
+    "Stock": 300,
+    "Rating": 4.3,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Women's Jeans",
+    "Description": "Skinny fit denim jeans with a stretchable fabric.",
+    "Price": 49.99,
+    "Stock": 200,
+    "Rating": 4.5,
+    "CategoryId": 2
+  },
+  {
+    "Name": "Children's Story Book",
+    "Description": "Illustrated story book for children aged 3-5.",
+    "Price": 12.99,
+    "Stock": 500,
+    "Rating": 4.7,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Cookbook",
+    "Description": "Recipe book with 100 easy and quick meals.",
+    "Price": 24.99,
+    "Stock": 150,
+    "Rating": 4.6,
+    "CategoryId": 4
+  },
+  {
+    "Name": "Gardening Gloves",
+    "Description": "Durable and waterproof gloves for gardening tasks.",
+    "Price": 14.99,
+    "Stock": 350,
+    "Rating": 4.4,
+    "CategoryId": 3
+  }
+]
