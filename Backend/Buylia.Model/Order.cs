@@ -4,7 +4,7 @@ namespace Buylia.Model;
 
 public class Order
 {
-    public int Id { get; set; }
+    public int OrderId { get; set; }
     public double TotalPrice { get; set; }
     public OrderStatus Status { get; set; }
     public DateTime OrderedAt { get; set; }
