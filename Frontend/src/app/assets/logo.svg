@@ -1,0 +1,31 @@
+<svg
+width="170"
+height="80"
+viewBox="0 0 200 80"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
+{/* <!-- Capital B with Left-Side Look --> */}
+<text
+    x="10"
+    y="55"
+    font-family="cursive"
+    font-size="5rem"
+    font-weight="semi-bold"
+    fill="#00728C"
+    transform="scale(-1, 1) translate(-60, 0)"
+>
+    B
+</text>
+
+{/* <!-- uylia Text --> */}
+<text
+    x="50"
+    y="50"
+    font-family="Arial, sans-serif"
+    font-size="4rem"
+    fill="#02869F"
+>
+    uylia
+</text>
+</svg>

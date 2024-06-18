@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* padding: 0.2rem; */
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden !important;
+}
+
+/* Add this in your CSS file */ 
+#hero .slick-prev, #hero .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#hero .slick-prev {
+    left: 10px !important;
+}
+
+#hero .slick-next {
+    right: 20px !important; 
+}
+
+
+#hero .slick-prev:before, #hero .slick-next:before {
+    font-size: 30px !important;
+    color: #01232bd4 !important;
+}
+
+/* img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover;
+} */
