@@ -1,6 +1,10 @@
 using Buylia.Context;
+using Buylia.Context.Extensions;
+using Buylia.Infrastructure.Extensions;
+using Buylia.Application.Extensions;
 using Buylia.Context.Seeds;
 using Microsoft.EntityFrameworkCore;
+using Buylia.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,18 +13,31 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-#region DB Connection
-builder.Services.AddDbContext<BuyliaDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
-sqlServerOptionsAction: SqlOptions =>
-{
-    SqlOptions.CommandTimeout(60);
-}), ServiceLifetime.Scoped);
+#region Extensions
+builder.Services.AddPersistence(builder.Configuration)
+                .AddInfrastructure()
+                .AddApplication();
 #endregion
-
 
 // =============== Middelware ===============
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.ConfigObject.AdditionalItems.Add("persistAuthorization", true);
+    });
+}
+
+//app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 #region Seeders
 using (var scope = app.Services.CreateScope())
@@ -40,17 +57,5 @@ using (var scope = app.Services.CreateScope())
     }
 }
 #endregion
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
 
 app.Run();
